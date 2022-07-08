@@ -32,7 +32,12 @@ function App() {
         console.log(response);
         setFounded(response.data.total_count);
         setRepos(response.data.items);
-        setMessage("");
+        if(founded>0){
+          setMessage("");
+        }
+        else{
+          setMessage("Can't find anything. Try another string.");
+        }
       }
       catch{
         setMessage("Something goes wrong. Please try again later.")

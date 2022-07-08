@@ -83,7 +83,7 @@ header {
     align-items: center;
     margin-bottom: 50px; }
     .App .container .search-block .search-input {
-      width: 87%; }
+      width: 77%; }
       .App .container .search-block .search-input input {
         padding: 10px;
         padding-left: 50px;
@@ -95,7 +95,7 @@ header {
         .App .container .search-block .search-input input:focus {
           outline: 3px solid lightgreen; }
     .App .container .search-block .search-btn {
-      width: 10%; }
+      width: 20%; }
       .App .container .search-block .search-btn button {
         font-size: 30px;
         width: 100%;

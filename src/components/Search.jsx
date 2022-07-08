@@ -10,7 +10,7 @@ const Search=({start, string, set})=>{
                 </div>
                 <div className="search-btn">
                     <button  onClick={start} >
-                        <img src="/images/search.svg" alt="Search" />
+                        Search
                     </button>
                 </div>
             </div>
