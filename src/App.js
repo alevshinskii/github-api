@@ -17,6 +17,9 @@ function App() {
 
   async function doSearch(e){
     e.preventDefault();
+
+    setMessage("Search...");
+
     if(searchString){
       const octokit = new Octokit();
       const queryString = '?q=' + encodeURIComponent(searchString);

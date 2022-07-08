@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0; }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+:focus, :active {
+  outline: none; }
+
+a:focus, a:active {
+  outline: none; }
+
+nav, footer, header, aside {
+  display: block; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+input, button, textarea {
+  font-family: inherit; }
+
+input::-ms-clear {
+  display: none; }
+
+button {
+  cursor: pointer; }
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0; }
+
+a, a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+ul li {
+  list-style: none; }
+
+img {
+  vertical-align: top; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400; }
+
+* {
+  font-family: "Open-Sans", sans-serif;
+  font-style: normal; }
+
+header {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+  margin-bottom: 50px;
+  border-bottom: 2px solid gray;
+  box-shadow: 1px 1px 10px; }
+  header h1 {
+    font-size: 40px;
+    font-weight: 600; }
+
+.App .container {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%; }
+  .App .container .search-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px; }
+    .App .container .search-block .search-input {
+      width: 87%; }
+      .App .container .search-block .search-input input {
+        padding: 10px;
+        padding-left: 50px;
+        font-size: 30px;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 1px 1px 10px; }
+        .App .container .search-block .search-input input:focus {
+          outline: 3px solid lightgreen; }
+    .App .container .search-block .search-btn {
+      width: 10%; }
+      .App .container .search-block .search-btn button {
+        font-size: 30px;
+        width: 100%;
+        border: 1px solid black;
+        border-radius: 10px;
+        height: 56px;
+        box-shadow: 1px 1px 10px; }
+        .App .container .search-block .search-btn button img {
+          width: 80%;
+          height: 80%; }
+  .App .container .results h2 {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px; }
+  .App .container .results table {
+    width: 100%;
+    table-layout: fixed;
+    font-size: 18px;
+    box-shadow: 1px 1px 10px;
+    border: 4px solid gray;
+    border-radius: 10px; }
+    .App .container .results table .table-head {
+      font-size: 20px;
+      font-weight: 600; }
+    .App .container .results table tr {
+      background-color: lightgray; }
+      .App .container .results table tr:nth-child(even) {
+        background-color: white; }
+      .App .container .results table tr td {
+        padding: 5px;
+        text-align: center; }
+        .App .container .results table tr td div {
+          overflow: hidden;
+          white-space: nowrap; }
+
+/*# sourceMappingURL=index.css.map */

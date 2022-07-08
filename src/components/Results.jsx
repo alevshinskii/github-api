@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import RepoItem from "./RepoItem";
 
 const Results=({founded,repos,message})=>{
@@ -13,11 +12,31 @@ const Results=({founded,repos,message})=>{
                 :
                 <div>
                     <h2>Results ({founded} founded)</h2>
-                    {
-                        repos.slice(0,10).map(repo=>
-                                <RepoItem key={repo.id} item={repo}/>
-                            )
-                    }
+                    <table>
+                        <thead>
+                            <tr className="table-head">
+                                <td>
+                                    ID
+                                </td>
+                                <td>
+                                    Name
+                                </td>
+                                <td>
+                                    Owner
+                                </td>
+                                <td>
+                                    Description
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                repos.slice(0,10).map(repo=>
+                                        <RepoItem key={repo.id} item={repo}/>
+                                    )
+                            }
+                        </tbody>
+                    </table>
                 </div>
             }
 
