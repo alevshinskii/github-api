@@ -126,7 +126,8 @@ header {
         background-color: white; }
       .App .container .results table tr td {
         padding: 5px;
-        text-align: center; }
+        text-align: center;
+        line-height: 24px; }
         .App .container .results table tr td div {
           overflow: hidden;
           white-space: nowrap; }
