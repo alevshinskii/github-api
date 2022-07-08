@@ -11,25 +11,34 @@ function App() {
 
   const [searchString,setSearchString] = useState("");
 
+
+  const [message,setMessage] = useState("Type something to search");
   
 
   async function doSearch(e){
     e.preventDefault();
-    const octokit = new Octokit();
-    const queryString = '?q=' + encodeURIComponent(searchString);
-    try{
-      const response = await octokit.request("GET /search/repositories"+queryString, {
-        headers: {
-          authorization: "0000000000000000000000000000000000000001",
-        }
-      });
-      console.log(response);
-      setFounded(response.data.total_count);
-      setRepos(response.data.items);
+    if(searchString){
+      const octokit = new Octokit();
+      const queryString = '?q=' + encodeURIComponent(searchString);
+      try{
+        const response = await octokit.request("GET /search/repositories"+queryString, {
+          headers: {
+            authorization: "0000000000000000000000000000000000000001",
+          }
+        });
+        console.log(response);
+        setFounded(response.data.total_count);
+        setRepos(response.data.items);
+        setMessage("");
+      }
+      catch{
+        setMessage("Something goes wrong. Please try again later.")
+      }
     }
-    catch{
-      alert("Something goes wrong. Please try again later.")
+    else{
+      setMessage("Your string is empty. Type something.")
     }
+
   }
 
 
@@ -37,7 +46,7 @@ function App() {
     <div className="App">
       <div className="container">
         <Search start={doSearch} string={searchString} set={setSearchString}/>
-        <Results repos={repos} founded={founded}/>
+        <Results repos={repos} founded={founded} message={message}/>
       </div>
     </div>
   );
