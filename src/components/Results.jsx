@@ -15,7 +15,7 @@ const Results=({founded,repos,message})=>{
                     <table>
                         <thead>
                             <tr className="table-head">
-                                <td>
+                                <td className="item-id">
                                     ID
                                 </td>
                                 <td>
@@ -25,7 +25,7 @@ const Results=({founded,repos,message})=>{
                                     Owner
                                 </td>
                                 <td>
-                                    Description
+                                    <span className="desktop">Description</span><span className="mobile">Desc</span>
                                 </td>
                             </tr>
                         </thead>

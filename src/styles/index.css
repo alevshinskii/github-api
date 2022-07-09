@@ -66,6 +66,7 @@ header {
   padding-top: 25px;
   padding-bottom: 15px;
   margin-bottom: 50px;
+  background-color: lightgray;
   border-bottom: 2px solid gray;
   box-shadow: 1px 1px 10px; }
   header h1 {
@@ -83,7 +84,7 @@ header {
     align-items: center;
     margin-bottom: 50px; }
     .App .container .search-block .search-input {
-      width: 77%; }
+      width: 87%; }
       .App .container .search-block .search-input input {
         padding: 10px;
         padding-left: 50px;
@@ -95,7 +96,7 @@ header {
         .App .container .search-block .search-input input:focus {
           outline: 3px solid lightgreen; }
     .App .container .search-block .search-btn {
-      width: 20%; }
+      width: 10%; }
       .App .container .search-block .search-btn button {
         font-size: 30px;
         width: 100%;
@@ -117,12 +118,14 @@ header {
     box-shadow: 1px 1px 10px;
     border: 4px solid gray;
     border-radius: 10px; }
-    .App .container .results table .table-head {
+    .App .container .results table thead {
       font-size: 20px;
       font-weight: 600; }
+      .App .container .results table thead tr td {
+        background-color: lightgray; }
     .App .container .results table tr {
       background-color: lightgray; }
-      .App .container .results table tr:nth-child(even) {
+      .App .container .results table tr:nth-child(odd) {
         background-color: white; }
       .App .container .results table tr td {
         padding: 5px;
@@ -131,5 +134,53 @@ header {
         .App .container .results table tr td div {
           overflow: hidden;
           white-space: nowrap; }
+        .App .container .results table tr td .mobile {
+          display: none; }
+
+@media screen and (max-width: 1000px) {
+  .App .container {
+    margin-left: 3%;
+    margin-right: 3%;
+    width: 94%; }
+    .App .container .search-block .search-input {
+      width: 75%; }
+      .App .container .search-block .search-input input {
+        padding-left: 10px;
+        font-size: 25px; }
+    .App .container .search-block .search-btn {
+      width: 20%; }
+    .App .container .results h2 {
+      font-size: 25px;
+      font-weight: 600;
+      margin-bottom: 20px; }
+    .App .container .results table {
+      width: 100%;
+      table-layout: fixed;
+      font-size: 18px;
+      box-shadow: 1px 1px 10px;
+      border: 4px solid gray;
+      border-radius: 10px; }
+      .App .container .results table thead {
+        font-size: 20px;
+        font-weight: 600; }
+        .App .container .results table thead tr td {
+          background-color: lightgray; }
+      .App .container .results table tr {
+        background-color: lightgray; }
+        .App .container .results table tr:nth-child(odd) {
+          background-color: white; }
+        .App .container .results table tr .item .item-id {
+          display: none; }
+        .App .container .results table tr td {
+          padding: 5px;
+          text-align: center;
+          line-height: 24px; }
+          .App .container .results table tr td div {
+            overflow: hidden;
+            white-space: nowrap; }
+          .App .container .results table tr td .desktop {
+            display: none; }
+          .App .container .results table tr td .mobile {
+            display: inline-block; } }
 
 /*# sourceMappingURL=index.css.map */

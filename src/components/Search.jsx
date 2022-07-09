@@ -1,4 +1,5 @@
 import React from "react";
+import searchIcon from './images/search.svg';
 
 const Search=({start, string, set})=>{
 
@@ -10,7 +11,7 @@ const Search=({start, string, set})=>{
                 </div>
                 <div className="search-btn">
                     <button  onClick={start} >
-                        Search
+                        <img src={searchIcon} alt="Search"/>
                     </button>
                 </div>
             </div>
